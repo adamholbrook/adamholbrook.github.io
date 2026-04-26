@@ -82,7 +82,7 @@ test.describe('achievements', () => {
     const section = page.locator('#achievements');
     await expect(section).toContainText('8h → 2h');
     await expect(section).toContainText('Order Processing Time');
-    await expect(section).toContainText('4');
-    await expect(section).toContainText('QA Engineers Mentored');
+    await expect(section).toContainText('6+');
+    await expect(section).toContainText('Teams Mentored');
   });
 });
