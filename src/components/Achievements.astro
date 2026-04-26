@@ -1,0 +1,100 @@
+---
+const achievements = [
+  {
+    metric: '8h → 2h',
+    label: 'Order Processing Time',
+    description:
+      'Led QA for a middleware project at Trinny London that slashed peak-load order processing time from 16 hours to 2 hours — an 8× throughput improvement.',
+    icon: '⚡',
+  },
+  {
+    metric: '3',
+    label: 'Test Suites Built from Zero',
+    description:
+      'Spearheaded the creation of three new test suites at Trinny London: load testing (Grafana K6), API contract testing (Postman/Newman), and frontend component testing.',
+    icon: '🏗',
+  },
+  {
+    metric: '4',
+    label: 'QA Engineers Mentored',
+    description:
+      'Built and led a QA team of 4, running roadmap sessions, pair programming, performance reviews, and one-to-ones to support growth and delivery.',
+    icon: '👥',
+  },
+  {
+    metric: '£$£',
+    label: 'Warehouse Migration Cost Savings',
+    description:
+      'Led QA across a major warehouse migration at Trinny London, with comprehensive test coverage that directly enabled substantial operational cost savings.',
+    icon: '🏭',
+  },
+];
+---
+
+<section id="achievements">
+  <div class="container">
+    <p class="section-label">Impact</p>
+    <h2 class="section-title">Key Achievements</h2>
+
+    <div class="achievements-grid">
+      {achievements.map((a) => (
+        <div class="achievement-card">
+          <div class="achievement-icon" aria-hidden="true">{a.icon}</div>
+          <div class="achievement-metric">{a.metric}</div>
+          <h3 class="achievement-label">{a.label}</h3>
+          <p class="achievement-description">{a.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .achievement-card {
+    background: linear-gradient(135deg, rgba(0, 198, 167, 0.04) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(0, 198, 167, 0.15);
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+    transition: transform 0.2s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .achievement-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 198, 167, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 198, 167, 0.08);
+  }
+
+  .achievement-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .achievement-metric {
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .achievement-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .achievement-description {
+    font-size: 0.875rem;
+    color: var(--slate-light);
+    line-height: 1.65;
+  }
+</style>

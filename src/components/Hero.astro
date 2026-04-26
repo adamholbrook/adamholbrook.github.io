@@ -1,0 +1,266 @@
+---
+---
+
+<section id="hero" class="hero-section">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <p class="section-label">Senior QA Engineer · Brighton, UK</p>
+      <h1>Adam<br /><span class="accent">Holbrook</span></h1>
+      <p class="hero-tagline">
+        10 years building quality into products — from first commit to production,
+        at scale.
+      </p>
+      <p class="hero-bio">
+        I lead QA strategy, build automation frameworks from the ground up, and
+        mentor teams to ship with confidence. Currently Senior QA at
+        <strong>Speedy Freight</strong>, previously Lead QA at
+        <strong>Trinny London</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn-primary">View Experience</a>
+        <a href="mailto:arholbrook90@gmail.com" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Years in QA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Teams Mentored</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Test Suites Built</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">playwright run</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="t-dim">$</span> npx playwright test</p>
+          <p class="t-dim">Running 12 tests using 4 workers</p>
+          <p>&nbsp;</p>
+          <p><span class="t-pass">✓</span> experience › lists current role</p>
+          <p><span class="t-pass">✓</span> experience › shows Speedy Freight</p>
+          <p><span class="t-pass">✓</span> skills › renders automation tools</p>
+          <p><span class="t-pass">✓</span> achievements › warehouse migration</p>
+          <p><span class="t-pass">✓</span> nav › links resolve correctly</p>
+          <p class="t-dim">  ···</p>
+          <p>&nbsp;</p>
+          <p class="t-pass">12 passed (3.2s)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7rem 0 4rem;
+    background: radial-gradient(ellipse at 70% 50%, rgba(0, 198, 167, 0.06) 0%, transparent 60%),
+                var(--navy);
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+
+  .accent {
+    color: var(--teal);
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .hero-bio {
+    font-size: 0.975rem;
+    color: var(--slate-light);
+    margin-bottom: 2rem;
+    max-width: 44ch;
+  }
+
+  .hero-bio strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.75rem;
+    background: var(--teal);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--teal-dark);
+    color: var(--navy);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    padding: 0.75rem 1.75rem;
+    border: 1px solid rgba(176, 186, 201, 0.3);
+    color: var(--slate-light);
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--white-soft);
+    color: var(--white);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--slate);
+    margin-top: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(176, 186, 201, 0.2);
+  }
+
+  /* Terminal */
+  .terminal {
+    background: #0a1628;
+    border: 1px solid rgba(0, 198, 167, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0,198,167,0.05);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+  }
+
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .terminal-bar .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .dot.red    { background: #ff5f56; }
+  .dot.yellow { background: #ffbd2e; }
+  .dot.green  { background: #27c93f; }
+
+  .terminal-title {
+    margin-left: 0.5rem;
+    color: var(--slate);
+    font-size: 0.75rem;
+  }
+
+  .terminal-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    line-height: 1.8;
+    color: var(--white-soft);
+  }
+
+  .t-dim   { color: var(--slate); }
+  .t-pass  { color: var(--green-pass); }
+
+  .hero-scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    color: var(--slate);
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.1em;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--slate), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+      display: none;
+    }
+  }
+</style>

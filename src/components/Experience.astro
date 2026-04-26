@@ -1,0 +1,255 @@
+---
+const jobs = [
+  {
+    company: 'Speedy Freight',
+    role: 'Senior QA',
+    period: 'October 2025 – Present',
+    current: true,
+    tags: ['Test Automation', 'CI/CD', 'Playwright'],
+    bullets: [
+      'Leading QA strategy and automation at a national freight logistics platform.',
+      'Driving adoption of Playwright and establishing a modern test architecture.',
+      'Collaborating with development teams to embed quality throughout the SDLC.',
+    ],
+  },
+  {
+    company: 'Trinny London',
+    role: 'Lead QA Engineer',
+    period: 'April 2023 – September 2025',
+    current: false,
+    tags: ['Team Lead', 'Playwright', 'Cypress', 'Grafana K6', 'Ecommerce'],
+    bullets: [
+      'Directly managed and mentored a team of 4 QA professionals through roadmaps, pair programming, and performance reviews.',
+      'Spearheaded creation of three new test suites: load (Grafana K6), API (Postman/Newman), and frontend component testing.',
+      'Reported directly to senior stakeholders on quality health and project progress across ecommerce and POS platforms.',
+      'Oversaw QA for a major warehouse migration resulting in substantial cost savings.',
+    ],
+  },
+  {
+    company: 'Trinny London',
+    role: 'QA Engineer',
+    period: 'June 2022 – April 2023',
+    current: false,
+    tags: ['Cypress', 'API Testing', 'Regression'],
+    bullets: [
+      'Maintained and extended regression test suites across ecommerce and internal tooling.',
+      'Led testing of a middleware project that reduced order processing time from 16 hours to 2 hours under peak load.',
+      'Progressed to Lead QA within 11 months based on technical impact and leadership qualities.',
+    ],
+  },
+  {
+    company: 'DROPS',
+    role: 'QA Lead',
+    period: 'February 2021 – June 2022',
+    current: false,
+    tags: ['Cypress', 'JavaScript', 'Jira', 'Mobile & Web'],
+    bullets: [
+      'Built the automation suite from scratch in JavaScript and Cypress within 8 months of joining.',
+      'Created company-wide QA roadmaps and provided regular stakeholder updates on QA health.',
+      'Oversaw releases for multiple mobile and web applications, monitoring crash reports and coordinating responses.',
+      'Mentored junior QA engineers in automation and manual testing best practices.',
+    ],
+  },
+  {
+    company: 'DROPS',
+    role: 'Senior QA Engineer',
+    period: 'July 2020 – February 2021',
+    current: false,
+    tags: ['Manual Testing', 'Jira', 'Risk Assessment'],
+    bullets: [
+      'Established rigorous manual processes and Jira-based issue tracking for mobile and web applications.',
+    ],
+  },
+  {
+    company: 'FUTRLI',
+    role: 'QA Test Engineer',
+    period: 'January 2016 – July 2020',
+    current: false,
+    tags: ['Selenium', 'Python', 'Docker', 'BDD', 'Behave', 'AWS'],
+    bullets: [
+      'Maintained automation suite using Selenium, Docker, Python, and Behave (BDD) across iOS, Android, and Web.',
+      'Championed Test-Driven Development practices within the wider engineering team.',
+      'Contributed to agile release workflows including AWS SHAs, GitHub release PRs, and release documentation.',
+      'Worked with AWS services including Cognito, S3, and DynamoDB.',
+    ],
+  },
+];
+---
+
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Career History</p>
+    <h2 class="section-title">10 Years of QA</h2>
+    <p class="section-intro">
+      From first-commit automation engineer to cross-functional QA lead — a decade of building
+      quality at scale across ecommerce, fintech, logistics, and SaaS.
+    </p>
+
+    <div class="timeline">
+      {jobs.map((job, i) => (
+        <article class={`job-card ${job.current ? 'current' : ''}`} data-index={i}>
+          <div class="job-marker">
+            <div class="marker-dot" />
+            {i < jobs.length - 1 && <div class="marker-line" />}
+          </div>
+          <div class="job-body">
+            <header class="job-header">
+              <div class="job-meta">
+                <h3 class="job-role">{job.role}</h3>
+                <span class="job-company">{job.company}</span>
+                {job.current && <span class="current-badge">Current</span>}
+              </div>
+              <time class="job-period">{job.period}</time>
+            </header>
+            <ul class="job-bullets">
+              {job.bullets.map((b) => <li>{b}</li>)}
+            </ul>
+            <div class="job-tags">
+              {job.tags.map((t) => <span class="tag">{t}</span>)}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-intro {
+    max-width: 60ch;
+    color: var(--slate-light);
+    margin-bottom: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .job-card {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 0 1.75rem;
+  }
+
+  .job-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.3rem;
+  }
+
+  .marker-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--navy-mid);
+    border: 2px solid var(--slate);
+    flex-shrink: 0;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .job-card.current .marker-dot {
+    background: var(--teal);
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px var(--teal-glow);
+  }
+
+  .marker-line {
+    flex: 1;
+    width: 2px;
+    background: rgba(176, 186, 201, 0.15);
+    margin: 6px 0;
+    min-height: 2rem;
+  }
+
+  .job-body {
+    padding-bottom: 2.5rem;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .job-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .job-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .job-company {
+    font-size: 0.95rem;
+    color: var(--teal);
+    font-weight: 500;
+  }
+
+  .current-badge {
+    padding: 0.15rem 0.65rem;
+    background: rgba(0, 198, 167, 0.15);
+    border: 1px solid var(--teal);
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-family: var(--font-mono);
+    color: var(--teal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .job-period {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--slate);
+    white-space: nowrap;
+  }
+
+  .job-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .job-bullets li {
+    font-size: 0.92rem;
+    color: var(--slate-light);
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .job-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 0.75rem;
+    top: 0.15rem;
+  }
+
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .job-header {
+      flex-direction: column;
+    }
+  }
+</style>

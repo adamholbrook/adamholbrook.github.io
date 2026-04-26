@@ -1,0 +1,87 @@
+---
+---
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="#hero" class="footer-logo">AH<span class="dot">.</span></a>
+      <p>Senior QA Engineer · Brighton, UK</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#automation-status">Live Status</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="mailto:arholbrook90@gmail.com">arholbrook90@gmail.com</a>
+      <a
+        href="https://linkedin.com/in/adam-rholbrook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Built with Astro · Tested with Playwright · © {new Date().getFullYear()} Adam Holbrook</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #070f1a;
+    border-top: 1px solid rgba(176, 186, 201, 0.08);
+    padding: 3rem 0 0;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .dot { color: var(--teal); }
+
+  .footer-left p {
+    font-size: 0.8rem;
+    color: var(--slate);
+  }
+
+  .footer-nav, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-nav a, .footer-contact a {
+    font-size: 0.875rem;
+    color: var(--slate-light);
+    transition: color 0.2s;
+  }
+
+  .footer-nav a:hover, .footer-contact a:hover { color: var(--teal); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(176, 186, 201, 0.06);
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: var(--slate);
+  }
+</style>
