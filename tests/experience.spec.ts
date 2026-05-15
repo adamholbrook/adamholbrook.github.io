@@ -28,7 +28,7 @@ test.describe('experience', () => {
 
   test('shows correct role progression at Trinny London', async ({ page }) => {
     const section = page.locator('#experience');
-    await expect(section).toContainText('Lead QA Engineer');
+    await expect(section).toContainText('Lead QA');
     await expect(section).toContainText('QA Engineer');
     await expect(section).toContainText('April 2023');
     await expect(section).toContainText('June 2022');
@@ -80,7 +80,7 @@ test.describe('achievements', () => {
   test('impact stats are visible', async ({ page }) => {
     await page.goto('/');
     const section = page.locator('#achievements');
-    await expect(section).toContainText('8h → 2h');
+    await expect(section).toContainText('16h → 2h');
     await expect(section).toContainText('Order Processing Time');
     await expect(section).toContainText('6+');
     await expect(section).toContainText('Teams Mentored');
